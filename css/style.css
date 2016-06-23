@@ -1,0 +1,26 @@
+body {
+  font-family: arial;
+  background-color: gray;
+    color: white;
+}
+
+h1 {
+  font-style: italic;
+  font-size: 40px;
+}
+
+h2 {
+  text-decoration: underline;
+}
+li {
+  font-style: italic;
+}
+
+h3 {
+  text-decoration: underline;
+}
+
+a {
+color: pink;
+  font-weight: bold;
+}
