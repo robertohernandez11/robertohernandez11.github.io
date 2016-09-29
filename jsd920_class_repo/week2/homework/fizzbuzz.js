@@ -21,7 +21,7 @@
 // Construct a for loop that iterates through, and `console.log()`'s out, numbers 1 - 100.
 
 
-
+//some text
 // ##### Step 2:
 // Add an `if/else` statement that logs the string `"fizz"` if the value being iterated over is divisible by `3`; otherwise, log out the value.
 
