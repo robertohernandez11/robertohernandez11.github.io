@@ -35,6 +35,17 @@ Open Weather Map Instructions:
 
 $(document).ready(function () {
   var apiKey = '19ab861f15cfd2e8216a3be1ed615598';
-  var weatherUrl = '';
+  var weatherUrl = 'api.openweathermap.org/data/2.5/weather?q={city name}';
+
+  $.ajax({
+	  url: 'http://your-url.com',
+	  type: 'GET',
+	  success: function (response) {
+	  	console.log(response);
+	  },
+	  error: function (xhr) {
+	    console.log(xhr);
+	  }
+	})
 });
 
