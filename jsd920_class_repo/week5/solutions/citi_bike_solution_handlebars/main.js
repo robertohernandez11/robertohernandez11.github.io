@@ -9,8 +9,14 @@ console.log() if successful.
 
 */
 
-window.onload = function () {
+// var httpRequest = new XMLHTTPRequest()
+// httpRequest.onreadystatechange = function() {
+//  console.log("ready state is: ",httpRequest.readyState) } 
+// }
+// httpRequest.open('GET','https://gbfs.citibikenyc.com/gbfs/en/station_information.json')
 
+// window.onload = function () {
+$(document).ready(function(){
 	/////////////////////////
 	// Vanilla JS Solution //
 	/////////////////////////
@@ -37,20 +43,30 @@ window.onload = function () {
 		function responseMethod() {
 		    // Request logic
 		    // Check if our state is "DONE"
+		    console.log(httpRequest.readyState) //view all states as they pass
 		    if (httpRequest.readyState === XMLHttpRequest.DONE) {
 		        // If our request was successful we get a return code/status of 200
 		        if (httpRequest.status === 200) {
 		            // Logic to perform after a successful request; access the API's data using the httpRequest object
-		            console.log(httpRequest);
+		            //console.log(httpRequest);
 
 	            	console.log(JSON.parse(httpRequest.response))
-
+	            	var data = JSON.parse(httpRequest.response)
+	            	populateData(data)
 		        } else {
 		            // This is the scenario that there was an error with our request
 		            console.log('There was a problem with the request.');
 		        }
 		    }
 		}
+	}
+
+	function populateData(data){
+		//console.log(data)
+		var template = $('#citibike-template').html()
+		var compileTemplate = Handlebars.compile(template)
+		var compileObj = compileTemplate(data.data)
+		$("#output").append(compileObj)
 	}
 
 	//////////////////////////
@@ -78,7 +94,10 @@ window.onload = function () {
 	// 	$.ajax({
 	// 		url: url,
 	// 		type: 'GET',
+	// 		dataType:'JSON',
+	// 		// data: {bla:1},
 	// 		success: function (response) {
+	// 			//console.log(JSON.stringify(response))
 	// 			console.log(response);
 	// 		},
 	// 		error: function (xhr) {
@@ -87,4 +106,5 @@ window.onload = function () {
 	// 		}
 	// 	})
 	// }
-};
+// };
+})//document.ready
