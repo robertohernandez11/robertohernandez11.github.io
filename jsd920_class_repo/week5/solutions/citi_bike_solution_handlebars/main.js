@@ -41,7 +41,7 @@ $(document).ready(function(){
 		httpRequest.send();
 
 		function responseMethod() {
-		    // Request logic
+		    // Request logicf
 		    // Check if our state is "DONE"
 		    console.log(httpRequest.readyState) //view all states as they pass
 		    if (httpRequest.readyState === XMLHttpRequest.DONE) {

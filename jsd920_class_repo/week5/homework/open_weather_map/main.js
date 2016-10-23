@@ -31,20 +31,28 @@ Open Weather Map Instructions:
 - Ex: user enters "Brooklyn" - search flicker API for "Brooklyn" and use the first image
 
 */
-
-
 $(document).ready(function () {
-  var apiKey = '19ab861f15cfd2e8216a3be1ed615598';
+	$("#getTemp").click(function() {
+    	var city = $('#location').val();
+    	$('#location').val("");
+
+ $("#nyc-weather").html = "";
+    })
+
+  var apiKey = 'f771001bca3114e29588bb918bfb4670';
   var weatherUrl = 'api.openweathermap.org/data/2.5/weather?q={city name}';
 
   $.ajax({
-	  url: 'http://your-url.com',
+	  url: 'http://api.openweathermap.org/data/2.5/forecast/city?id=524901&APPID=f771001bca3114e29588bb918bfb4670',
 	  type: 'GET',
+	  dataType: "JSON",
 	  success: function (response) {
+	  	//console.log(JSON.stringify(response))
 	  	console.log(response);
 	  },
 	  error: function (xhr) {
-	    console.log(xhr);
+	    console.log('An error occurred:');
+		console.log(xhr);
 	  }
 	})
 });
