@@ -35,8 +35,15 @@ $(document).ready(function () {
 	$("#getTemp").click(function() {
     	var city = $('#location').val();
     	$('#location').val("");
+    })
 
- $("#nyc-weather").html = "";
+ $("#getTemp").click(function() {
+ 	console.log($("#showTemp").text());
+ 	if($("#showTemp").text() = "temperature") {
+ 		var showTemp = "temperature"("");
+
+ }
+ 
     })
 
   var apiKey = 'f771001bca3114e29588bb918bfb4670';
@@ -47,7 +54,6 @@ $(document).ready(function () {
 	  type: 'GET',
 	  dataType: "JSON",
 	  success: function (response) {
-	  	//console.log(JSON.stringify(response))
 	  	console.log(response);
 	  },
 	  error: function (xhr) {
@@ -55,5 +61,6 @@ $(document).ready(function () {
 		console.log(xhr);
 	  }
 	})
-});
+  });
+
 
