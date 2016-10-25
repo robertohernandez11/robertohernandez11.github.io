@@ -32,35 +32,78 @@ Open Weather Map Instructions:
 
 */
 $(document).ready(function () {
-	$("#getTemp").click(function() {
-    	var city = $('#location').val();
-    	$('#location').val("");
-    })
 
- $("#getTemp").click(function() {
- 	console.log($("#showTemp").text());
- 	if($("#showTemp").text() = "temperature") {
- 		var showTemp = "temperature"("");
+    var clearInfo = document.getElementById("clear");
+    $("#getTemp").click(function () {
+        var city_user = $('.city').val();
 
- }
+        var apiKey = '&APPID=f771001bca3114e29588bb918bfb4670';
+        var weatherUrl = 'http://api.openweathermap.org/data/2.5/weather?q= ' + city_user;
+
+        $.ajax({
+            // url: 'http://api.openweathermap.org/data/2.5/weather?q=' + city_user + '&APPID=f771001bca3114e29588bb918bfb4670',
+            url: weatherUrl + apiKey,
+            type: 'GET',
+            dataType: "JSON",
+            success: function (response) {
+
+                console.log(response);
+
+                var kelvinToFarenheight = (( response.main.temp - 273.15) * 9 / 5) + 32;
+                kelvinToFarenheight = kelvinToFarenheight.toString().substr(0, 4);
+
+                $("#showTemp")[0].innerHTML += " " + kelvinToFarenheight + " F";
+                $("#showHum")[0].innerHTML += " " + response.main.humidity;
+                $("#showWind")[0].innerHTML += " " + response.wind.speed;
+
+            },
+            error: function (response) {
+                console.log('An error occurred:');
+                console.log(response);
+            }
+        })
+    });
+
+
+    clearInfo.addEventListener("click", function () {
+        $("#showTemp")[0].innerHTML = "Temperature:"
+        $("#showHum")[0].innerHTML = "Humidity:";
+        $("#showWind")[0].innerHTML = "Wind Speed:";
+    });
+});
+
+
+
+// $(document).ready(function () {
+// 	$("#getTemp").click(function() {
+//     	var city = $('#location').val();
+//     	$('#location').val("");
+//     })
+
+//  $("#getTemp").click(function() {
+//  	console.log($("#showTemp").text());
+//  	if($("#showTemp").text() = "temperature") {
+//  		var showTemp = "temperature"("");
+
+//  }
  
-    })
+//     })
 
-  var apiKey = 'f771001bca3114e29588bb918bfb4670';
-  var weatherUrl = 'api.openweathermap.org/data/2.5/weather?q={city name}';
+//   var apiKey = 'f771001bca3114e29588bb918bfb4670';
+//   var weatherUrl = 'api.openweathermap.org/data/2.5/weather?q={city name}';
 
-  $.ajax({
-	  url: 'http://api.openweathermap.org/data/2.5/forecast/city?id=524901&APPID=f771001bca3114e29588bb918bfb4670',
-	  type: 'GET',
-	  dataType: "JSON",
-	  success: function (response) {
-	  	console.log(response);
-	  },
-	  error: function (xhr) {
-	    console.log('An error occurred:');
-		console.log(xhr);
-	  }
-	})
-  });
+//   $.ajax({
+// 	  url: 'http://api.openweathermap.org/data/2.5/forecast/city?id=524901&APPID=f771001bca3114e29588bb918bfb4670',
+// 	  type: 'GET',
+// 	  dataType: "JSON",
+// 	  success: function (response) {
+// 	  	console.log(response);
+// 	  },
+// 	  error: function (xhr) {
+// 	    console.log('An error occurred:');
+// 		console.log(xhr);
+// 	  }
+// 	})
+//   });
 
 

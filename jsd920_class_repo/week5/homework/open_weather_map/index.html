@@ -1,33 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-  	<title></title>
-	<link rel="stylesheet" href="style.css">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-	<h1>Open Weather Maps API</h1>
-	<hr>
+<h1>Open Weather Maps API</h1>
+<hr>
 
-	<div>
-		<h2>Current Weather in NYC</h2>
-		<div id="nyc-weather"></div>
+<div class="ad">
+    <h2>Current Weather in NYC</h2>
+    <div id="nyc-weather"></div>
 
-			<p><span>Temperature:<div id="showTemp"></div></span></p>
+    <p><span id="showTemp">Temperature:</span></p>
 
-			<p><span>Humidity:<div id="showHum"></div></span></p>
+    <p><span id="showHum">Humidity:</span></p>
 
-			<p><span>Wind Speed:<div id="showWind"></div></span></p>
-	</div>
-	<hr>
+    <p><span id="showWind">Wind Speed:</span></p>
+</div>
+<hr>
 
-	<h1>Find Weather</h1>
-		<h3>City<input class="location" />
-		State<input class="location"/>
-		<button id="getTemp">GO!</button>
+<h1>Find Weather</h1>
+<h3>
+    City<input class="city"/>
+    <button id="getTemp">GO!</button>
+    <button id="clear">Clear </button>
+</h3>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  	<script src="main.js" type="text/javascript" charset="utf-8" async defer></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="main.js" type="text/javascript" charset="utf-8" async defer></script>
 
 </body>
 </html>
