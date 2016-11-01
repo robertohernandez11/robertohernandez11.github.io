@@ -1,17 +1,15 @@
 ## Week 6 Homework
 
-### Assignment Due on Thursday, 10/26:
-
-* Sign up for a [500px account](href="https://500px.com/)
+### Assignment Due on Thursday, 11/3:
+* Continue working on Feedr
 
 #### Optional
-* Spend sometime reviewing the [500px documentation](https://github.com/500px/500px-js-sdk) 
+* Reading: [Understanding Prototypes](http://yehudakatz.com/2011/08/12/understanding-prototypes-in-javascript/)
 
-### Assignment Due on Tuesday, 11/1:
+### Assignment Due on Tuesday, 11/8:
 
 #### Coding Assignment
-* Finish 500px project
-* Based on Feedr requirements determine what keys\values are needed from [Mashable JSON](http://mashable.com/stories.json)
+* Continue working on Feedr
 
 #### Final Project 
 * Keep working on your project
