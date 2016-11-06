@@ -38,8 +38,11 @@ Instructions:
 
 
 $(document).ready(function () {
-
+function myFunction(){
+	document.getElementById("#dog").innerHTML = "WOOF";
+}
 	// push all animal instances here
-	var farmAnimals = [];
+	//var farmAnimals = [];
+
 
 })
