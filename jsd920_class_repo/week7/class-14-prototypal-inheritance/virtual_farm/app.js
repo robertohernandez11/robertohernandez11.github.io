@@ -38,11 +38,36 @@ Instructions:
 
 
 $(document).ready(function () {
-function myFunction(){
-	document.getElementById("#dog").innerHTML = "WOOF";
-}
+ var arr = [{img:"images/dog.png", sound:"WOOF"},
+  {img:"images/lion.jpg", sound: "ROAR"}, 
+  {img:"images/snake.jpg", sound: "HISS"}]
+//loop through the array using the forEach method and then use jQuery to append
+//the image to the container class
+	arr.forEach(function (d){
+		var elem = $("<img>").attr("src", d.img)
+		$(".container-fluid.farm").append(elem)
+		elem.click(function(){
+			alert(d.sound)
+		})
+	})
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	// push all animal instances here
 	//var farmAnimals = [];
 
 
-})
