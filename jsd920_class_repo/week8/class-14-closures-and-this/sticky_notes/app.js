@@ -29,3 +29,26 @@
 	Bonus:
 	- Remove a sticky note if a user clicks on it
 */
+$(document).ready(function() {
+    var count = 0;
+    var color = $("#color").val();
+    var message = $("#message").val();
+    $('#color').click(function() {
+
+    })
+
+    $('#showSticky').click(function() {
+        count++
+        $("#color").val();
+        $("#message").val();
+        var div = $('<div>')
+        div.css({ width: '20px', height: '20px' })
+        div.html(count)
+        $('body').append(div)
+    })
+
+    $('body').on('click', 'div', function() {
+        console.log("inside click")
+        $(this).remove()
+    })
+})
