@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Roberto Hernandez</title>
+    <link href='https://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+    function blinker() {
+        $('.blinking').fadeOut(500);
+        $('.blinking').fadeIn(500);
+    }
+    setInterval(blinker, 2000);
+    </script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <div class="mmg">
+                <nav class="clearfix_header">
+                    <a href="#">Home</a>
+                    <a href="#">About</a>
+                    <a href="#">Services</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Contact Us</a>
+                    <div class="welcome">
+                        <p class="blinking">WELCOME TO MY PAGE</p>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <div>
+            <div class="media">
+                <img class="logo" src="images/me.jpg">
+                <div class="social_icons">
+                    <a href="#"><img src="images/google.png"></a>
+                    <a href="#"><img src="images/twitter.png"></a>
+                    <a href="#"><img src="images/facebook.png"></a>
+                    <a href="#"><img src="images/rss.png"></a>
+                </div>
+                <div id="msg"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div>
+                <h2>Current Weather in NYC</h2>
+                <div id="nyc-weather"></div>
+            </div>
+            <div class="divider"></div>
+            <div>
+                <form id="weather-form">
+                    <h2>Find Your local Weather</h2>
+                    <label for="city">City</label>
+                    <input name="city" type="text" id="city" placeholder="City">
+                    <label for="state">State</label>
+                    <input name="state" type="text" id="state" placeholder="State">
+                    <button class="button" style="vertical-align:middle"><span>GO!</span></button>
+                </form>
+                <div id="weather-output"></div>
+                <!-- <button id="clickme">Flickr</button> -->
+            </div>
+            <script id="weather-template" type="text/x-handlebars-template">
+                <p>City: {{city}}</p>
+                <p>Temperature: {{temp}}</p>
+                <p>Humidity: {{humidity}}</p>
+                <p>Wind Speed: {{windSpeed}}</p>
+            </script>
+        </div>
+        <section class="wrapper">
+            <div class="quote">
+                <div class="kuote">
+                    <blockquote>
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </blockquote>
+                </div>
+            </div>
+            <div class="homebox">
+                <div class="container2">
+                    <ul class="clearfix_list">
+                        <li class="clearfix one ">
+                            <h2>Home Box 1</h2>
+                            <img class="img" src="images/photo-column1.jpg">
+                            <p>Lorem ipsum dolor sit etconsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <a href="#"><span>Read more ></span></a>
+                        </li>
+                        <li class="clearfix two">
+                            <h2>Home Box 2</h2>
+                            <img class="img" src="images/photo-column2.jpg">
+                            <p>Lorem ipsum dolor sit etconsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <a href="#"><span>Read more ></span></a>
+                        </li>
+                        <li class="clearfix three">
+                            <h2>Home Box 3</h2>
+                            <img class="img" src="images/photo-column3.jpg">
+                            <p>Lorem ipsum dolor sit etconsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <a href="#"><span>Read more ></span></a>
+                        </li>
+                        <li class="clearfix one ">
+                            <h2>Home Box 4</h2>
+                            <img class="img" src="images/photo-column1.jpg">
+                            <p>Lorem ipsum dolor sit etconsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <a href="#"><span>Read more ></span></a>
+                        </li>
+                        <li class="clearfix two">
+                            <h2>Home Box 5</h2>
+                            <img class="img" src="images/photo-column2.jpg">
+                            <p>Lorem ipsum dolor sit etconsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <a href="#"><span>Read more ></span></a>
+                        </li>
+                        <li class="clearfix three">
+                            <h2>Home Box 6</h2>
+                            <img class="img" src="images/photo-column3.jpg">
+                            <p>Lorem ipsum dolor sit etconsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <a href="#"><span>Read more ></span></a>
+                        </li>
+                        <li class="clearfix two">
+                            <h2>Home Box 7</h2>
+                            <img class="img" src="images/photo-column2.jpg">
+                            <p>Lorem ipsum dolor sit etconsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <a href="#"><span>Read more ></span></a>
+                        </li>
+                        <li class="clearfix three">
+                            <h2>Home Box 8</h2>
+                            <img class="img" src="images/photo-column3.jpg">
+                            <p>Lorem ipsum dolor sit etconsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <a href="#"><span>Read more ></span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section>
+            <footer>
+                <div class="widget">
+                    <div class="widget1 a">
+                        <h3>Widget 1</h3>
+                        <ul>
+                            <li class="color_blue">Documentation</li>
+                            <li class="color_blue">Plugins</li>
+                            <li class="color_blue">Suggest Ideas</li>
+                            <li class="color_blue">Support Forum</li>
+                            <li class="color_blue">Themes</li>
+                            <li class="color_blue">WordPress Blog</li>
+                        </ul>
+                    </div>
+                    <div class="widget2 a">
+                        <h3>Widget 2</h3>
+                        <p class="w2">Lorem ipsum dolor sit etconsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit etconsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                    <div class="widget3 a">
+                        <h3>Widget 3</h3>
+                        <ul>
+                            <li class="color_blue">Log in</li>
+                            <li class="color_blue">Entries RSS</li>
+                            <li class="color_blue">Comments RSS</li>
+                            <li class="color_blue">WordPress.org</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="copyrite">
+                    &copy Copyright 2016 Busy Hands.</div>
+                <div class="busy">Busy Hands theme brought to you by <span>Busy people!</span>
+                </div>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+                <script src="handlebars.js"></script>
+                <script src="main.js" type="text/javascript" charset="utf-8" async defer></script>
+            </footer>
+        </section>
+</body>
+
+</html>
