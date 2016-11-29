@@ -1,5 +1,6 @@
 {
   "projects": {
-    "production": "portfolio-eed20"
+    "production": "portfolio-eed20",
+    "default": "portfolio-eed20"
   }
 }
