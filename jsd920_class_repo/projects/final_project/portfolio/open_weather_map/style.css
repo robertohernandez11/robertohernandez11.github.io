@@ -1,0 +1,10 @@
+body {
+  background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    margin: 20%;
+    border: solid 10px gold;
+    padding: 2%;
+}

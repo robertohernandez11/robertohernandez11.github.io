@@ -261,6 +261,7 @@ a {
 .img {
     border: solid 5px #eeeeee;
     width: 290px;
+    cursor: pointer;
 }
 
 /*.widget1 {

@@ -1,19 +1,28 @@
-html, body {
-  margin: 0;
-  height: 100%;
-  width: 100%;
+html,
+body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
 }
+
+.box-color-input {
+    margin-top: 3%;
+    margin-left: 35%;
+    margin-bottom: 5%;
+}
+
 .container {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
+
 .box {
-  height: 200px;
-  width: 200px;
-  margin: 2px;
-  text-align: center;
-  font-size: 1.5em;
-  line-height: 185px;
-  font-weight: bold;
+    height: 200px;
+    width: 200px;
+    margin: 2px;
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 185px;
+    font-weight: bold;
 }
